@@ -1,0 +1,44 @@
+@import "../../styles/colors.scss";
+
+.MainMenu {
+  align-items: center;
+  background-color: $purple-menu;
+  border-radius: 0px 15px 15px 0px;
+  box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+  padding: 60px 20px;
+  width: 17%;
+  &__title {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    > span:first-child {
+      color: $yellow;
+      font-size: 80px;
+      font-weight: 800;
+      line-height: 80px;
+    }
+    > span:last-child {
+      color: $white;
+      font-size: 55px;
+      line-height: 55px;
+    }
+  }
+
+  > footer {
+    bottom: 15px;
+    color: $white;
+    font-size: 11px;
+    font-weight: 200;
+    position: absolute;
+    > a {
+      color: $yellow;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+@import "../../../../styles/colors.scss";
+
+.BillsRow {
+  &__cell {
+    background-color: #ffffff10;
+    border: none;
+    color: $white;
+    font-size: 16px;
+    padding: 10px 0;
+    text-align: center;
+    &:first-child {
+      border-radius: 10px 0 0 10px;
+    }
+    &:last-child {
+      border-radius: 0 10px 10px 0;
+    }
+  }
+}

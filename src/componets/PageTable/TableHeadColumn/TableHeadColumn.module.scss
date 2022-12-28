@@ -1,0 +1,32 @@
+@import "../../../styles/colors.scss";
+
+.TableHeadColumn {
+  &__Cell {
+    border-bottom: none;
+    color: $white;
+    text-align: center;
+    &:first-child {
+      width: 15%;
+    }
+  }
+
+  &__Button {
+    border-bottom: none;
+    width: 10%;
+    text-align: center;
+    > button {
+      background-color: $yellow;
+      border-radius: 5px;
+      border: none;
+      color: $bg-blue-dark;
+      cursor: pointer;
+      outline: none;
+      padding: 5px 15px;
+      text-align: center;
+      transition: all ease .4s;
+      &:hover {
+        background-color: $green;
+      }
+    }
+  }
+}
