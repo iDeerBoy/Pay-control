@@ -13,3 +13,6 @@ Bugfix/some-description
 3. [React router dom v6](https://reactrouter.com/en/main)
 4. [Material UI](https://mui.com/material-ui/getting-started/overview/)
 5. [Material UI Icons](https://mui.com/material-ui/material-icons/)
+
+## Tutorials
+1. [jest test](https://www.pluralsight.com/guides/how-to-test-react-components-in-typescript)
