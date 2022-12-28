@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { WalletColumnsIds } from "../types";
 import { getMonth, getSpend, getCurrency } from "../../../utils/utils";
-import { TableCell, TableRow } from "@mui/material";
 import styles from "./WalletRow.module.scss";
 import AcctionButton from "./AcctionButton";
 import { Collapse } from "@mui/material";
@@ -44,13 +43,13 @@ const renderByColumnId = (
   }
 
   return (
-    <TableCell
+    <td
       key={`${columnId}-${id}`}
       className={styles.WalletRow__cell}
       style={colorCell}
     >
       {content}
-    </TableCell>
+    </td>
   );
 };
 
@@ -60,7 +59,7 @@ const WalletRow = ({ columns, rowData }) => {
   const billsData = rowData.bills.map((i: any) => ({...i, closedMonth: rowData.closed}))
   return (
     <>
-      <TableRow className={styles.WalletRow}>
+      <tr className={styles.WalletRow}>
         {columns.map((column) =>
           renderByColumnId(
             column.id,
@@ -69,16 +68,16 @@ const WalletRow = ({ columns, rowData }) => {
             openCollapseHandler
           )
         )}
-      </TableRow>
-      <TableRow>
-        <TableCell className={styles.WalletRow__Collapse} colSpan={4} >
+      </tr>
+      <tr>
+        <td className={styles.WalletRow__Collapse} colSpan={4} >
           <Collapse in={isCollapseOpen} unmountOnExit>
             <div className={styles.WalletRow__CollapseContent}>
               <BillsTable billsData={billsData} closedMonth={rowData.closed} />
             </div>
           </Collapse>
-        </TableCell>
-      </TableRow>
+        </td>
+      </tr>
     </>
   );
 };

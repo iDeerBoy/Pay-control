@@ -10,16 +10,16 @@ const TableHeadColumn = ({ columns, addHandler }) => {
       {columns.map((column: Column) => {
         if (column.isButton) {
           return (
-            <TableCell key={column.id} className={styles.TableHeadColumn__Button}>
+            <th key={column.id} className={styles.TableHeadColumn__Button}>
               <button onClick={addHandler}>{column.label}</button>
-            </TableCell>
+            </th>
           );
         }
 
         return (
-          <TableCell key={column.id} className={styles.TableHeadColumn__Cell}>
+          <th key={column.id} className={styles.TableHeadColumn__Cell}>
             {column.label}
-          </TableCell>
+          </th>
         );
       })}
     </>

@@ -21,7 +21,7 @@ const Wallet = () => {
       },
       ...data,
     ]);
-  }, [data]);
+  }, []);
 
   return (
     <section className={styles.Wallet}>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./BillForm.module.scss";
 import { IconButton } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
@@ -24,7 +24,7 @@ const BillForm = () => {
       ...formData,
       shared: shared,
     });
-  }, [shared, formData]);
+  }, [shared]);
 
   return (
     <div className={styles.BillForm}>

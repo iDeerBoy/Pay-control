@@ -36,18 +36,18 @@ const renderByColumnId = (columnId, rowData) => {
   }
 
   return (
-    <TableCell key={`${columnId}-${id}`} className={styles.BillsRow__cell}>
+    <td key={`${columnId}-${id}`} className={styles.BillsRow__cell}>
       {content}
-    </TableCell>
+    </td>
   );
 };
 
 const BillsRow = ({ columns, rowData }) => {
   return (
     <>
-      <TableRow className={styles.BillsRow}>
+      <tr className={styles.BillsRow}>
         {columns.map((columun) => renderByColumnId(columun.id, rowData))}
-      </TableRow>
+      </tr>
     </>
   );
 };
